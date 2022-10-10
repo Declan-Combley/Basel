@@ -12,7 +12,6 @@ typedef enum TokenKind {
     Plus,
     Minus,
     Times,
-    Divide,
 
     // Types
     Character, 
@@ -38,7 +37,6 @@ const char printable_tokens[][10] = {
     "Plus",
     "Minus",
     "Times",
-    "Divide",
     "Character", 
     "Number",
     "Empty",
@@ -54,7 +52,6 @@ TokenKind to_token_kind(char t)
     else if (t == '+')        { return Plus; }
     else if (t == '-')        { return Minus; }
     else if (t == '*')        { return Times; }
-    else if (t == '\\')       { return Divide; }
     else if (isdigit(t) == 0) { return Character; }
     else if (isdigit(t) != 0) { return Number; }
     else                      { return Err; }
@@ -82,7 +79,7 @@ Token *tokenize(char *s, int l)
         TokenKind tk = tokens_kind[i].kind;
         TokenKind next_tk = tokens_kind[i + 1].kind;
 
-        if (tk == Err || tk == Plus || tk == Minus || tk == Times || tk == Divide || tk == Bang) {
+        if (tk == Err || tk == Plus || tk == Minus || tk == Times || tk == Bang) {
             Token t = {
                 .kind = tk,
                 .value = 0,
