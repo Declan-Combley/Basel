@@ -5,7 +5,16 @@ A very crude stack based programming language that can either be simulated (or c
 ## Quickstart
 ```shell
 $ ./build.sh
-$ ./basel example.basel
+$ ./basel sim example.basel
+$ ./basel com example.basel
+```
+
+## Running The Code
+You can either compile or simulate any program.
+```shell
+$ ./build.sh
+$ ./basel com example.basel && ./out
+$ ./basel sim example.basel
 ```
 
 ## Pushing Numbers Onto The Stack
