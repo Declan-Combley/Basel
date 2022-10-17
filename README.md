@@ -18,13 +18,13 @@ $ ./basel sim example.basel
 ```
 
 ## Pushing Numbers Onto The Stack
-```shell
+```
 35 34
 1 2 3
 ```
 
 ## Stack Operations
-```shell
+```
 !      # Pops the value off the top of the stack and prints it
 dup    # Clones the value at the top of the stack
 over   # Pushes the value left of the stack to the top
